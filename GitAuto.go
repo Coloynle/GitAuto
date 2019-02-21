@@ -69,7 +69,7 @@ func (G *GitAuto) updateProject() {
 	G.gitReset()
 	G.gitCheckout("master")
 	G.gitFetch()
-	G.gitRebase("")
+	G.gitRebase("origin/master")
 	if "master" != NowBranch {
 		G.gitClean()
 		G.gitCheckout(NowBranch)
